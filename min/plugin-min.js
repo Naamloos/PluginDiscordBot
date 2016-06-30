@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   if (Notification.permission !== "granted")
     Notification.requestPermission();
-while(Notification.permission !== "granted"){
-	
-}
-  notifyMe();
+	  notifyMe();
 });
 
 function notifyMe() {
