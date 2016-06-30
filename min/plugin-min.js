@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (Notification.permission !== "granted")
     Notification.requestPermission();
 	  notifyMe();
+	  notifyMe2();
 });
 
 function notifyMe() {
@@ -20,6 +21,28 @@ function notifyMe() {
 
     notification.onclick = function () {
       window.open("https://twitter.com/naamloos_nl");      
+    };
+    
+  }
+
+}
+
+function notifyMe2() {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification('Message from Naamloos!', {
+      icon: 'https://discordapp.com/assets/2c21aeda16de354ba5334551a883b481.png',
+      body: "If you have any questions, please join my discord chat!",
+    });
+
+    notification.onclick = function () {
+      window.open("https://discord.gg/0oZpaYcAjfvkDuE4");      
     };
     
   }
