@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
   if (Notification.permission !== "granted")
     Notification.requestPermission();
+while(Notification.permission !== "granted"){
+	
+}
   notifyMe();
 });
 
@@ -13,13 +16,13 @@ function notifyMe() {
   if (Notification.permission !== "granted")
     Notification.requestPermission();
   else {
-    var notification = new Notification('Notification title', {
-      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-      body: "Hey there! You've been notified!",
+    var notification = new Notification('Message from Naamloos!', {
+      icon: 'https://pbs.twimg.com/profile_images/744194279023706112/4yagaGWr_400x400.jpg',
+      body: "Thanks for using PluginDiscordBot! please follow me on twitter :3",
     });
 
     notification.onclick = function () {
-      window.open("http://stackoverflow.com/a/13328397/1269037");      
+      window.open("https://twitter.com/naamloos_nl");      
     };
     
   }
