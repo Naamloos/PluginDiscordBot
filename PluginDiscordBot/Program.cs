@@ -327,7 +327,7 @@ datafolder=data");
                     }
                     if (line.StartsWith("datafolder="))
                     {
-                        prefix = line.Substring(11);
+                        datafolder = line.Substring(11);
                     }
                 }
             }
